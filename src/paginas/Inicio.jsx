@@ -11,7 +11,7 @@ function Inicio() {
             <ListaTareas />
             <div className="link_container">
                 <Link to="/pokedex">
-                    <button>Ir a la Pokédex</button>
+                    <button>Ver los Pokemon</button>
                 </Link>
             </div>
         </div>
