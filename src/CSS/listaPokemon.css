@@ -2,6 +2,27 @@
     text-align: center;
     margin-top: 20px;
 }
+.pokemon_button {
+    background-color: #646cff; /* Color atractivo */
+    color: white; /* Texto blanco */
+    padding: 10px 20px; /* Espaciado cómodo */
+    font-size: 16px; /* Tamaño adecuado */
+    border-radius: 8px; /* Bordes redondeados */
+    border: none; /* Sin borde */
+    cursor: pointer; /* Manito en hover */
+    transition: background-color 0.3s ease; /* Transición suave */
+    font-weight: bold; /* Hacer el texto un poco más destacado */
+    text-transform: uppercase; /* Poner el texto en mayúsculas */
+}
+
+.pokemon_button:hover {
+    background-color: #535bf2; /* Un color de hover más oscuro */
+}
+
+.pokemon_button:focus {
+    outline: none; /* Quitar el borde de foco */
+    box-shadow: 0 0 0 3px rgba(100, 107, 255, 0.5); /* Resaltar al hacer clic */
+}
 
 .pokemon_grid {
     display: grid;

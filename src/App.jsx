@@ -1,18 +1,19 @@
-import Contador from "./componentes/contador";
-import ListaTareas from "./componentes/listaTareas";
-import ListaPokemon from "./componentes/ListaPokemon";
+import { Routes, Route } from "react-router-dom";
+import Inicio from "./paginas/Inicio";
+import Pokedex from "./paginas/Pokedex";
 
 function App() {
     return (
-        <div className="app_container">
-            <h1>¡Rodrigo, mi primer contador con React y Vite! 🚀</h1>
-            <Contador />
-            <ListaTareas />
-            <ListaPokemon /> {/* Agregamos la Pokédex aquí */}
-        </div>
+        <Routes>
+            <Route path="/" element={<Inicio />} />
+            <Route path="/pokedex" element={<Pokedex />} />
+        </Routes>
     );
 }
 
 export default App;
+
+
+
 
 
