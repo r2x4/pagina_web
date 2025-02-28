@@ -15,16 +15,16 @@ function ListaTareas(){
             if (Array.isArray(tareasGuardadas)) {
                 setTareas(tareasGuardadas);
             } else {
-                localStorage.removeItem("tareas"); // Elimina datos corruptos
+                localStorage.removeItem("tareas"); 
             }
         } catch (error) {
             console.error("Error al leer localStorage:", error);
-            localStorage.removeItem("tareas"); // Elimina datos corruptos
+            localStorage.removeItem("tareas"); 
         }
     }, []);
     
 
-    // guardar tareas en el loclStorage cunado cambien
+    // guardar tareas en el localStorage cuando cambien
 
     useEffect(() => {
         localStorage.setItem("tareas", JSON.stringify(tareas));
@@ -32,8 +32,14 @@ function ListaTareas(){
 
     
     const agregarTarea = () => {
+        const tareaLimpia = nuevaTarea.trim();
         if (nuevaTarea.trim () === '') return;
-        setTareas([...tareas, nuevaTarea]);
+
+        if (tareas.includes(tareaLimpia)) {
+            alert("La tarea ya existe en la lista");
+            return;
+        }
+        setTareas([...tareas, tareaLimpia]);
         setNuevaTarea('');
     };
 
