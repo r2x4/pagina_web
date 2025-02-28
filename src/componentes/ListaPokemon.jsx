@@ -1,36 +1,48 @@
-import { useEffect } from "react";
-import { useSelector, useDispatch } from "react-redux";
-import { fetchPokemons } from "../redux/pokemonSlice";
+import { useEffect, useState } from "react";
 import "../CSS/listaPokemon.css";
 
 function ListaPokemon() {
-    const dispatch = useDispatch();
-    const { lista, status, error } = useSelector((state) => state.pokemon);
+    const [pokemonData, setPokemonData] = useState([]);
 
     useEffect(() => {
-        if (status === "idle") {
-            dispatch(fetchPokemons());
-        }
-    }, [status, dispatch]);
+    const fetchPokemons = async () => {
+        const response = await fetch("https://pokeapi.co/api/v2/pokemon?limit=151");
+        const data = await response.json();
+        const pokemons = await Promise.all(
+        data.results.map(async (pokemon) => {
+            const pokemonDetails = await fetch(pokemon.url);
+            const details = await pokemonDetails.json();
+            return details;
+        })
+        );
+        setPokemonData(pokemons);
+    };
+    fetchPokemons();
+    }, []);
 
     return (
-        <div className="pokemon_container">
-            <h2>Pokédex</h2>
-            {status === "loading" && <p>Cargando Pokémon...</p>}
-            {status === "failed" && <p>Error: {error}</p>}
-            <div className="pokemon_grid">
-                {lista.map((pokemon, index) => (
-                    <div key={index} className="pokemon_card">
-                        <p>{pokemon.name}</p>
-                        <img
-                            src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${index + 1}.png`}
-                            alt={pokemon.name}
-                        />
-                    </div>
-                ))}
+    <div className="pokemon_container">
+        <div className="pokemon_grid">
+            {pokemonData.map((pokemon) => (
+            <div key={pokemon.id} className="pokemon_card">
+                <img
+                src={pokemon.sprites.front_default}
+                alt={pokemon.name}
+                className="pokemon_image"
+                />
+                    <p>{pokemon.name}</p>
+                    <p className="pokemon_type">
+                        {pokemon.types.map((type) => type.type.name).join(", ")}
+                    </p>
+                    <p className="pokemon_hp">HP: {pokemon.stats[0].base_stat}</p>
+                    <p className="pokemon_attack">Attack: {pokemon.stats[1].base_stat}</p>
+                    <p className="pokemon_defense">Defense: {pokemon.stats[2].base_stat}</p>
+            </div>
+            ))}
             </div>
         </div>
     );
 }
 
 export default ListaPokemon;
+
