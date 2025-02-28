@@ -1,12 +1,21 @@
 .lista_container {
     text-align: center;
     margin-top: 20px;
+    background: #f74040;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    margin: 20px auto;
 }
 
 input {
     padding: 10px;
-    margin-right: 10px;
+    width: 80%;
     font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 10px;
 }
 
 .lista_container button {
@@ -16,30 +25,56 @@ input {
     border: none;
     border-radius: 5px;
     transition: 0.3s;
+    background-color: #4CAF50;
+    color: white;
 }
 
-
 .lista_container button:hover {
-    background-color: rgb(136, 30, 217);
+    background-color: #7d24b0;
     opacity: 0.8;
 }
 
+/* Estilos para la lista */
 ul {
     list-style: none;
     padding: 0;
 }
 
 li {
-    background-color: #9010bb;
+    background-color: #a320b5;
     padding: 10px;
     margin: 5px 0;
     display: flex;
     justify-content: space-between;
     align-items: center;
     border-radius: 5px;
+    color: white;
+    transition: 0.3s;
 }
 
-.lista_container button {
+li:hover {
+    background-color: #9010bb;
+}
+
+/* Tareas completadas */
+li.completada {
+    text-decoration: line-through;
+    color: #ddd;
+    background: #5c065c;
+}
+
+/* Botón eliminar */
+.delete_btn {
     background-color: #ff4d4d;
     color: white;
+    border: none;
+    padding: 5px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: 0.3s;
 }
+
+.delete_btn:hover {
+    background-color: #c82333;
+}
+
