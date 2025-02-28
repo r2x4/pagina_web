@@ -4,7 +4,7 @@ import ListarTarea from "./componentes/listaTareas"
 
 function App() {
   return (
-    <div>
+    <div className="app_container">
       <h1>¡Rodrigo Mi primer contador con React y Vite! 🚀</h1>
       <Contador />
       <ListarTarea /> {/* Agregamos el componente Aqui */}

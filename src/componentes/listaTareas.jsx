@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { FaTrash } from "react-icons/fa";
 import '../CSS/listaTareas.css'
 
 
@@ -29,7 +30,8 @@ function ListaTareas(){
             <ul>
                 {tareas.map((tarea, index) => (
                     <li key={index}>
-                        {tarea} <button onClick={() => eliminarTarea(index)}></button>
+                        {tarea} 
+                        <button className="delete_btn" onClick={() => eliminarTarea(index)}><FaTrash /></button>
                     </li>
                 ))}
             </ul>
