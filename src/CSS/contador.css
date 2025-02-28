@@ -5,9 +5,9 @@
 }
 
   /* Estilizar los botones */
-button {
+  .contador_container button {
     font-size: 18px;
-    margin: 5px;
+    margin: 10px;
     padding: 10px 15px;
     border: none;
     cursor: pointer;
@@ -15,7 +15,14 @@ button {
     transition: 0.3s;
 }
 
-button:hover {
+.botones-container {
+  display: flex;
+  justify-content: center;
+  gap: 5px; 
+  margin-top: 20px;
+}
+
+.contador_container button:hover {
     background-color: rgb(140, 39, 194);
     opacity: 0.8;
 }
