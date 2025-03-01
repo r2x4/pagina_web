@@ -1,3 +1,19 @@
+<h1> Html, css, Javascript ,react y vite Pokemon</h1>
+
+- Estado del proyecto: Finalizacion.
+
+#Imagenes Proyecto pokemon pagina web
+
+![Imagen pegada (3)](https://github.com/user-attachments/assets/aa32d338-3c14-4bbb-bf5c-a6bb37a9b174)
+
+![Imagen pegada (4)](https://github.com/user-attachments/assets/b9e2b59e-3a7c-4463-a131-48628f930c01)
+
+![Imagen pegada (5)](https://github.com/user-attachments/assets/5516f096-9b36-409a-afd1-b490647c999f)
+
+#Video
+
+
+
 # React + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
