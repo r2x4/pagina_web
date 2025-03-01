@@ -1,18 +1,18 @@
 /* Estilo para el botón en la página de inicio (Ir a la Pokédex) */
 button {
-    background-color: #646cff; /* Fondo de color */
-    color: white; /* Color de texto */
-    font-size: 16px; /* Tamaño de la fuente */
-    padding: 10px 20px; /* Espaciado alrededor del texto */
-    border: none; /* Sin borde */
-    border-radius: 5px; /* Bordes redondeados */
-    cursor: pointer; /* Cambia el cursor a una mano */
-    transition: background-color 0.3s ease; /* Efecto de transición */
+    background-color: #646cff; 
+    color: white; 
+    font-size: 16px; 
+    padding: 10px 20px; 
+    border: none; 
+    border-radius: 5px; 
+    cursor: pointer; 
+    transition: background-color 0.3s ease; 
 }
 
 /* Efecto cuando se pasa el mouse sobre el botón */
 button:hover {
-    background-color: #535bf2; /* Cambio de color cuando el mouse pasa encima */
+    background-color: #535bf2;
 }
 /* En tu archivo de CSS (botones.css) */
 .link_container {

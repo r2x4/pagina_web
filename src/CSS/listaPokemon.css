@@ -30,13 +30,13 @@ h1 {
 }
 
 .pokemon_button:focus {
-    outline: none; /* Quitar el borde de foco */
+    outline: none; 
     box-shadow: 0 0 0 3px rgba(100, 107, 255, 0.5); 
 }
 
 .pokemon_grid {
     display: grid;
-    grid-template-columns: repeat(5, 1fr); /* 4 tarjetas por fila */
+    grid-template-columns: repeat(5, 1fr); 
     gap: 25px;
     padding: 20px;
     justify-content: center;

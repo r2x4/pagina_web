@@ -7,11 +7,11 @@
 .app_container {
   display: flex;
   flex-direction: column;
-  justify-content: center; /* Centra verticalmente */
-  align-items: center; /* Centra horizontalmente */
-  text-align: center; /* Asegura que el texto se alinee */
-  height: 100vh; /* Ocupa toda la altura de la pantalla */
-  margin: 20px; /* Evita márgenes innecesarios */
+  justify-content: center; 
+  align-items: center; 
+  text-align: center; 
+  height: 100vh; 
+  margin: 20px; 
 }
 
 

@@ -6,7 +6,7 @@
 /* Contenedor para organizar tareas y Pokédex */
 .contenido {
   display: flex;
-  flex-wrap: wrap; /* Evita que se monten encima si no hay espacio */
+  flex-wrap: wrap; 
   gap: 20px;
   justify-content: center;
   align-items: flex-start;
@@ -16,7 +16,7 @@
 .lista_wrapper,
 .pokemon_wrapper {
   width: 100%;
-  max-width: 400px; /* Ajusta si es necesario */
+  max-width: 400px; 
   background: #fff;
   padding: 15px;
   border-radius: 10px;
@@ -34,7 +34,7 @@
 /* Estilos de la grilla de Pokémon */
 .pokemon_grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr); /* 4 por fila */
+  grid-template-columns: repeat(4, 1fr); 
   gap: 15px;
   justify-content: center;
 }
